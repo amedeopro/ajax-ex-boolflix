@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <title>BoolFlix</title>
   </head>
   <body>
@@ -27,7 +28,7 @@
       <li>Titolo: {{titoloFilm}}</li>
       <li>Titolo Originale: {{titoloOriginale}}</li>
       <li>Lingua Originale: {{lingua}}</li>
-      <li>Voto: {{voto}}</li>
+      <li>Voto: <span class="stelline">{{voto}}</span></li>
       <br>
     </script>
   <script src="script.js" charset="utf-8"></script>

@@ -21,6 +21,7 @@ $(document).ready(function(){
           var source   = document.getElementById("entry-template").innerHTML;
           var template = Handlebars.compile(source);
           var votoAverage = Math.ceil(risultatoFilm[i].vote_average / 2);
+          console.log(votoAverage);
           var context = {
             titoloFilm: risultatoFilm[i].title,
             titoloOriginale: risultatoFilm[i].original_title,
@@ -40,8 +41,9 @@ $(document).ready(function(){
   })
 
   function stelline(voto){
-    for (var k = 0; k < voto.length; i++) {
-      alert('ok sei nella funzione');
+
+    for (var k = 0; k < voto; k++) {
+      $('.stelline').append('<i class="fas fa-star"></i>');
     }
   }
 
