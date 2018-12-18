@@ -3,7 +3,7 @@ $(document).ready(function(){
   $('#myButton').click(function(){
 
     var filmUtente = $('#nomeFilm').val();
-
+    $('.filmList').html('');
 
     $.ajax({
       url: 'https://api.themoviedb.org/3/search/movie',
@@ -17,14 +17,15 @@ $(document).ready(function(){
         var risultatoFilm = data.results;
 
         for (var i = 0; i < risultatoFilm.length; i++) {
+
           var source   = document.getElementById("entry-template").innerHTML;
           var template = Handlebars.compile(source);
-
+          var votoAverage = Math.ceil(risultatoFilm[i].vote_average / 2);
           var context = {
             titoloFilm: risultatoFilm[i].title,
             titoloOriginale: risultatoFilm[i].original_title,
             lingua: risultatoFilm[i].original_language,
-            voto: Math.ceil(risultatoFilm[i].vote_average / 2),
+            voto: stelline(votoAverage), //Math.ceil(risultatoFilm[i].vote_average / 2)
           };
           var html = template(context);
           $('.filmList').append(html);
@@ -38,5 +39,10 @@ $(document).ready(function(){
 
   })
 
+  function stelline(voto){
+    for (var k = 0; k < voto.length; i++) {
+      console.log('ciao')
+    }
+  }
 
 });
