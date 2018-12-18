@@ -41,7 +41,7 @@ $(document).ready(function(){
 
   function stelline(voto){
     for (var k = 0; k < voto.length; i++) {
-      console.log('ciao')
+      alert('ok sei nella funzione');
     }
   }
 
