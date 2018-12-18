@@ -41,9 +41,8 @@ $(document).ready(function(){
   })
 
   function stelline(voto){
-
     for (var k = 0; k < voto; k++) {
-      $('.stelline').append('<i class="fas fa-star"></i>');
+      var star = '<i class="fas fa-star"></i>'
     }
   }
 
