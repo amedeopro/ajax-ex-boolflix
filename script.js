@@ -21,11 +21,12 @@ $(document).ready(function(){
           var source   = document.getElementById("entry-template").innerHTML;
           var template = Handlebars.compile(source);
           var votoAverage = Math.ceil(risultatoFilm[i].vote_average / 2);
+          var lingua = risultatoFilm[i].original_language;
           console.log(votoAverage);
           var context = {
             titoloFilm: risultatoFilm[i].title,
             titoloOriginale: risultatoFilm[i].original_title,
-            lingua: risultatoFilm[i].original_language,
+            lingua: flag(lingua),
             voto: stelline(votoAverage), //Math.ceil(risultatoFilm[i].vote_average / 2)
           };
           var html = template(context);
@@ -46,6 +47,17 @@ $(document).ready(function(){
       star += '<i class="fas fa-star"></i>'
     }
     return star;
+  }
+
+  function flag(bandiera){
+    var linguaDelFilm = '';
+
+    if (bandiera == 'en') {
+      linguaDelFilm = '<img src="img/en.jpg">';
+    } else if (bandiera == 'it') {
+      linguaDelFilm = '<img src="img/it.png">';
+    }
+    return linguaDelFilm;
   }
 
 });
