@@ -41,9 +41,11 @@ $(document).ready(function(){
   })
 
   function stelline(voto){
+    var star = '';
     for (var k = 0; k < voto; k++) {
-      var star = '<i class="fas fa-star"></i>'
+      star += '<i class="fas fa-star"></i>'
     }
+    return star;
   }
 
 });
