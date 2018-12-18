@@ -24,7 +24,7 @@ $(document).ready(function(){
             titoloFilm: risultatoFilm[i].title,
             titoloOriginale: risultatoFilm[i].original_title,
             lingua: risultatoFilm[i].original_language,
-            voto: risultatoFilm[i].vote_average,
+            voto: Math.ceil(risultatoFilm[i].vote_average / 2),
           };
           var html = template(context);
           $('.filmList').append(html);
