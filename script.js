@@ -56,6 +56,8 @@ $(document).ready(function(){
       linguaDelFilm = '<img src="img/en.jpg">';
     } else if (bandiera == 'it') {
       linguaDelFilm = '<img src="img/it.png">';
+    } else {
+      linguaDelFilm = bandiera;
     }
     return linguaDelFilm;
   }
