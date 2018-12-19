@@ -17,20 +17,8 @@ $(document).ready(function(){
         var risultatoFilm = data.results;
 
         for (var i = 0; i < risultatoFilm.length; i++) {
-
-          var source   = document.getElementById("entry-template").innerHTML;
-          var template = Handlebars.compile(source);
-          var votoAverage = Math.ceil(risultatoFilm[i].vote_average / 2);
-          var lingua = risultatoFilm[i].original_language;
-          console.log(votoAverage);
-          var context = {
-            titoloFilm: risultatoFilm[i].title,
-            titoloOriginale: risultatoFilm[i].original_title,
-            lingua: flag(lingua),
-            voto: stelline(votoAverage), //Math.ceil(risultatoFilm[i].vote_average / 2)
-          };
-          var html = template(context);
-          $('.filmList').append(html);
+          //qui devo inserire una funzione che crea il contenuto
+          generaHtml(risultatoFilm[i])
         }
       },
       error: function(){
@@ -60,6 +48,23 @@ $(document).ready(function(){
       linguaDelFilm = bandiera;
     }
     return linguaDelFilm;
+  }
+
+  function generaHtml(contenuto){
+    var source   = document.getElementById("entry-template").innerHTML;
+    var template = Handlebars.compile(source);
+    var votoAverage = Math.ceil(contenuto.vote_average / 2);
+    var lingua = contenuto.original_language;
+    console.log(votoAverage);
+    var context = {
+      immagine_film: '<img src="https://image.tmdb.org/t/p/w342/' + contenuto.poster_path + '">',
+      titoloFilm: contenuto.title,
+      titoloOriginale: contenuto.original_title,
+      lingua: flag(lingua),
+      voto: stelline(votoAverage),
+    };
+    var html = template(context);
+    $('.filmList').append(html);
   }
 
 });
