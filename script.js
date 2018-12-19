@@ -86,6 +86,7 @@ $(document).ready(function(){
       immagine_film: '<img src="https://image.tmdb.org/t/p/w342/' + contenuto.poster_path + '">',
       titoloFilm: contenuto.title,
       titoloOriginale: contenuto.original_title,
+      descrizione: contenuto.overview,
       lingua: flag(lingua),
       voto: stelline(votoAverage),
     };
