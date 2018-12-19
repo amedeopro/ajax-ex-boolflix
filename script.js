@@ -42,7 +42,7 @@ $(document).ready(function(){
             var serieTv = risultatoSerieTv[i]
             serieTv.title = serieTv.name;
             serieTv.original_title = serieTv.original_name;
-            generaHtml(serieTv[i])
+            generaHtml(serieTv)
           }
         },
         error: function(){
@@ -50,7 +50,7 @@ $(document).ready(function(){
         }
 
 
-      })
+    })
     }
 
   })
