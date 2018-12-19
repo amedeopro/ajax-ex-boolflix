@@ -5,27 +5,53 @@ $(document).ready(function(){
     var filmUtente = $('#nomeFilm').val();
     $('.filmList').html('');
 
-    $.ajax({
-      url: 'https://api.themoviedb.org/3/search/movie',
-      method: 'GET',
-      data: {
-        api_key: 'fd686ababf68788e8d87639cef87259e',
-        language: 'it',
-        query: filmUtente
-      },
-      success: function(data){
-        var risultatoFilm = data.results;
+    if (filmUtente != '') {
+      $.ajax({
+        url: 'https://api.themoviedb.org/3/search/movie',
+        method: 'GET',
+        data: {
+          api_key: 'fd686ababf68788e8d87639cef87259e',
+          language: 'it',
+          query: filmUtente
+        },
+        success: function(data){
+          var risultatoFilm = data.results;
 
-        for (var i = 0; i < risultatoFilm.length; i++) {
-          //qui devo inserire una funzione che crea il contenuto
-          generaHtml(risultatoFilm[i])
+          for (var i = 0; i < risultatoFilm.length; i++) {
+            //qui devo inserire una funzione che crea il contenuto
+            generaHtml(risultatoFilm[i])
+          }
+        },
+        error: function(){
+          alert('qualcosa non sta funzionando');
         }
-      },
-      error: function(){
-        alert('qualcosa non sta funzionando');
-      }
-    })
+      })
 
+      $.ajax({
+        url: 'https://api.themoviedb.org/3/search/tv',
+        method: 'GET',
+        data: {
+          api_key: 'fd686ababf68788e8d87639cef87259e',
+          language: 'it',
+          query: filmUtente
+        },
+        success: function(data){
+          var risultatoSerieTv = data.results;
+
+          for (var i = 0; i < risultatoSerieTv.length; i++) {
+            var serieTv = risultatoSerieTv[i]
+            serieTv.title = serieTv.name;
+            serieTv.original_title = serieTv.original_name;
+            generaHtml(serieTv[i])
+          }
+        },
+        error: function(){
+          alert('qualcosa non sta funzionando')
+        }
+
+
+      })
+    }
 
   })
 
