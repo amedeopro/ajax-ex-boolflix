@@ -59,11 +59,11 @@ input[type=text]{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .film-tv{
   width: 350px;
-  height: 380px;
+  height: auto;
   margin: 10px;
 }

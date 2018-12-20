@@ -83,7 +83,7 @@ $(document).ready(function(){
     var lingua = contenuto.original_language;
     console.log(votoAverage);
     var context = {
-      immagine_film: '<img src="https://image.tmdb.org/t/p/w342/' + contenuto.poster_path + '">',
+      immagine_film: imgFilm(contenuto.poster_path),  //'<img src="https://image.tmdb.org/t/p/w342/' + contenuto.poster_path + '">'
       titoloFilm: contenuto.title,
       titoloOriginale: contenuto.original_title,
       descrizione: contenuto.overview,
@@ -91,7 +91,17 @@ $(document).ready(function(){
       voto: stelline(votoAverage),
     };
     var html = template(context);
-    $('.filmList').append(html);
+    $('.container-all-films').append(html);
+  }
+
+  function imgFilm(url){
+    var placeImg = '<img src="https://image.tmdb.org/t/p/w342/' + url + '">'
+
+    if (placeImg == '<img src="https://image.tmdb.org/t/p/w342/null">'){
+      placeImg = '<img src="https://via.placeholder.com/342x485?text=Immagine+non+disponibile">'
+    }
+
+    return placeImg;
   }
 
 });
