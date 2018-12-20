@@ -5,33 +5,54 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <title>BoolFlix</title>
   </head>
   <body>
 
-    <input type="text" id="nomeFilm">
-    <button type="button" id="myButton">CERCA IL FILM</button>
+    <div class="menu-container">
+      <div class="menu-left">
 
+      </div>
+      <div class="menu-right">
+        <input type="text" id="nomeFilm">
+        <button type="button" id="myButton">CERCA IL FILM</button>
+      </div>
+    </div>
 
-      <div class="list">
+    <div class="container-all-films">
+      <div class="film-tv">
         <ul class="filmList">
 
         </ul>
       </div>
+    </div>
+
+
+
+      <!-- <div class="container-film"> -->
+        <!-- <div class="list">
+
+            <ul class="filmList">
+
+            </ul>
+
+        </div> -->
+      <!-- </div> -->
 
 
 
 
     <script id="entry-template" type="text/x-handlebars-template">
-      <br>
-      <li>{{{immagine_film}}}</li>
-      <li>Titolo: {{titoloFilm}}</li>
-      <li>Titolo Originale: {{titoloOriginale}}</li>
-      <li>Descrizione:  {{ descrizione }}</li>
-      <li>Lingua Originale: {{{lingua}}}</li>
-      <li>Voto: <span class="stelline">{{{voto}}}</span></li>
-      <br>
+
+        <li>{{{immagine_film}}}</li>
+        <li>Titolo: {{titoloFilm}}</li>
+        <li>Titolo Originale: {{titoloOriginale}}</li>
+        <li>Descrizione:  {{ descrizione }}</li>
+        <li>Lingua Originale: {{{lingua}}}</li>
+        <li>Voto: <span class="stelline">{{{voto}}}</span></li>
+
     </script>
   <script src="script.js" charset="utf-8"></script>
   </body>
