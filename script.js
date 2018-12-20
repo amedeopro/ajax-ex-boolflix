@@ -3,7 +3,7 @@ $(document).ready(function(){
   $('#myButton').click(function(){
 
     var filmUtente = $('#nomeFilm').val();
-    $('.filmList').html('');
+    $('.container-all-films').html('');
 
     if (filmUtente != '') {
       $.ajax({
@@ -16,7 +16,7 @@ $(document).ready(function(){
         },
         success: function(data){
           var risultatoFilm = data.results;
-
+          console.log(risultatoFilm);
           for (var i = 0; i < risultatoFilm.length; i++) {
             //qui devo inserire una funzione che crea il contenuto
             generaHtml(risultatoFilm[i])
@@ -81,7 +81,7 @@ $(document).ready(function(){
     var template = Handlebars.compile(source);
     var votoAverage = Math.ceil(contenuto.vote_average / 2);
     var lingua = contenuto.original_language;
-    console.log(votoAverage);
+    // console.log(votoAverage);
     var context = {
       immagine_film: imgFilm(contenuto.poster_path),  //'<img src="https://image.tmdb.org/t/p/w342/' + contenuto.poster_path + '">'
       titoloFilm: contenuto.title,
