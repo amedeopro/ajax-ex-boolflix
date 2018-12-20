@@ -73,4 +73,23 @@ input[type=text]{
   width: 350px;
   height: auto;
   margin: 5px;
+  position: relative;
+}
+
+.infoFilm{
+  display: none;
+}
+
+.infoFilm ul{
+  list-style: none;
+}
+
+.active{
+  position: absolute;
+  display: inline-block;
+  width: 350px;
+  height: 520px;
+  margin: 5px;
+  background: black;
+  color: white;
 }

@@ -92,6 +92,20 @@ $(document).ready(function(){
     };
     var html = template(context);
     $('.container-all-films').append(html);
+
+    $('.imgFilm').mouseenter(function(){
+
+      $(this).children().addClass('active')
+
+    })
+
+    $('.imgFilm').mouseleave(function(){
+
+      $(this).children().removeClass('active')
+
+    })
+
+
   }
 
   function imgFilm(url){
