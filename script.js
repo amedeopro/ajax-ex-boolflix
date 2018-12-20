@@ -98,7 +98,7 @@ $(document).ready(function(){
     var placeImg = '<img src="https://image.tmdb.org/t/p/w342/' + url + '">'
 
     if (placeImg == '<img src="https://image.tmdb.org/t/p/w342/null">'){
-      placeImg = '<img src="https://via.placeholder.com/342x485?text=Immagine+non+disponibile">'
+      placeImg = '<img src="https://via.placeholder.com/342x513?text=Immagine+non+disponibile">'
     }
 
     return placeImg;
