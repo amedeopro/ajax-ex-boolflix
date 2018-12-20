@@ -73,7 +73,6 @@ input[type=text]{
   width: 350px;
   height: auto;
   margin: 5px;
-  position: relative;
 }
 
 .infoFilm{
@@ -85,11 +84,16 @@ input[type=text]{
 }
 
 .active{
+  display: block;
   position: absolute;
-  display: inline-block;
+  top: 80px;
   width: 350px;
   height: 520px;
   margin: 5px;
   background: black;
   color: white;
+}
+
+.active li{
+  padding: 10px;
 }

@@ -81,7 +81,7 @@ $(document).ready(function(){
     var template = Handlebars.compile(source);
     var votoAverage = Math.ceil(contenuto.vote_average / 2);
     var lingua = contenuto.original_language;
-    // console.log(votoAverage);
+    
     var context = {
       immagine_film: imgFilm(contenuto.poster_path),  //'<img src="https://image.tmdb.org/t/p/w342/' + contenuto.poster_path + '">'
       titoloFilm: contenuto.title,
