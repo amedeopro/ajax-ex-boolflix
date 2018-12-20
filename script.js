@@ -81,7 +81,7 @@ $(document).ready(function(){
     var template = Handlebars.compile(source);
     var votoAverage = Math.ceil(contenuto.vote_average / 2);
     var lingua = contenuto.original_language;
-    
+
     var context = {
       immagine_film: imgFilm(contenuto.poster_path),  //'<img src="https://image.tmdb.org/t/p/w342/' + contenuto.poster_path + '">'
       titoloFilm: contenuto.title,
@@ -95,13 +95,13 @@ $(document).ready(function(){
 
     $('.imgFilm').mouseenter(function(){
 
-      $(this).children().addClass('active')
+      $(this).siblings().addClass('active')
 
     })
 
     $('.imgFilm').mouseleave(function(){
 
-      $(this).children().removeClass('active')
+      $(this).siblings().removeClass('active')
 
     })
 

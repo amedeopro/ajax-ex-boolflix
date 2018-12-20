@@ -83,6 +83,10 @@ input[type=text]{
   list-style: none;
 }
 
+.imgFilm{
+  position: relative;
+}
+
 .active{
   display: block;
   position: absolute;
@@ -92,7 +96,12 @@ input[type=text]{
   margin: 5px;
   background: black;
   color: white;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+
+
 
 .active li{
   padding: 10px;
