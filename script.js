@@ -94,13 +94,13 @@ $(document).ready(function(){
     $('.container-all-films').append(html);
 
     $('.film-tv').mouseenter(function(){
-
+      $(this).children('.imgFilm').addClass('hidden')
       $(this).children('.infoFilm').addClass('active')
 
     })
 
     $('.film-tv').mouseleave(function(){
-
+      $(this).children('.imgFilm').removeClass('hidden')
       $(this).children('.infoFilm').removeClass('active')
 
     })
