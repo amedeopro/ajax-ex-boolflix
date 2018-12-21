@@ -77,28 +77,19 @@ input[type=text]{
 
 .infoFilm{
   display: none;
+  width: 100%; /* 350px */
+  /* height: 100%; /* 520px */
+  margin: 5px;
+  background: black;
+  color: white;
 }
 
 .infoFilm ul{
   list-style: none;
 }
 
-.imgFilm{
-  position: relative;
-}
-
 .active{
-  display: block;
-  position: absolute;
-  top: 80px;
-  width: 350px;
-  height: 520px;
-  margin: 5px;
-  background: black;
-  color: white;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
 }
 
 

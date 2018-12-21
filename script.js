@@ -95,13 +95,13 @@ $(document).ready(function(){
 
     $('.imgFilm').mouseenter(function(){
 
-      $(this).siblings().addClass('active')
+      $(this).children('.infoFilm').addClass('active')
 
     })
 
     $('.imgFilm').mouseleave(function(){
 
-      $(this).siblings().removeClass('active')
+      $(this).children('.infoFilm').removeClass('active')
 
     })
 
