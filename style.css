@@ -92,8 +92,11 @@ input[type=text]{
   display: inline-block;
 }
 
-
-
 .active li{
   padding: 10px;
+}
+
+.imgFilm{
+  width: 342px;
+  height: 100%;
 }

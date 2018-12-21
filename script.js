@@ -93,13 +93,13 @@ $(document).ready(function(){
     var html = template(context);
     $('.container-all-films').append(html);
 
-    $('.imgFilm').mouseenter(function(){
+    $('.film-tv').mouseenter(function(){
 
       $(this).children('.infoFilm').addClass('active')
 
     })
 
-    $('.imgFilm').mouseleave(function(){
+    $('.film-tv').mouseleave(function(){
 
       $(this).children('.infoFilm').removeClass('active')
 
